@@ -5,8 +5,8 @@
 %include "arrays_java.i";
 %include "various.i";
 %include "enumtypeunsafe.swg";
-SWIG_JAVABODY_PROXY(public, public, SWIGTYPE)
-SWIG_JAVABODY_TYPEWRAPPER(public, public, public, SWIGTYPE)
+SWIG_JAVABODY_PROXY(public, public, SWIGTYPE);
+SWIG_JAVABODY_TYPEWRAPPER(public, public, public, SWIGTYPE);
 
 
 //own lib
