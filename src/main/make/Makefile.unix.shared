@@ -1,6 +1,7 @@
 SHELL = /bin/sh
 CC = cc
 TARGETDIR = ../resources
+$(shell mkdir -p $(TARGETDIR))
 
 #if java home is not set (debian) find java home by searching for javac.
 ifndef JAVA_HOME
