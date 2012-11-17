@@ -27,6 +27,6 @@
 
 %enddef
 
-CLIENT_MESSAGE_TYPEMAP(xcbjb.xcb_generic_event_t);
+CLIENT_MESSAGE_TYPEMAP(xcb.xcb_generic_event_t);
 
 %apply char* EVENT {  char *event };

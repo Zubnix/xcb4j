@@ -12,7 +12,7 @@
 
 	<properties>
 		<swig.file>${basedir}/src/main/swig/xcb.i</swig.file>
-		<swig.package>xcbjb</swig.package>
+		<swig.package>xcb</swig.package>
 		<swig.outdir>${project.build.directory}/generated-sources/swig/${swig.package}</swig.outdir>
 	</properties>
 
@@ -61,7 +61,7 @@
 									failonerror="true">
 									<arg value="-java" />
 									<arg value="-package" />
-									<arg value="xcbjb" />
+									<arg value="xcb" />
 									<arg value="-o" />
 									<arg value="${swig.outdir}/xcbJNI.c" />
 									<arg value="${swig.file}" />
@@ -98,7 +98,7 @@
 						</goals>
 						<configuration>
 							<sources>
-								<source>${swig.outdir}</source>
+								<source>${project.build.directory}/generated-sources/swig</source>
 							</sources>
 						</configuration>
 					</execution>
