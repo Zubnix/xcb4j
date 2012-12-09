@@ -11,6 +11,11 @@
 	<name>X C Bindings for Java</name>
 
 	<properties>
+		<maven.compiler.compilerVersion>1.6</maven.compiler.compilerVersion>
+		<maven.compiler.source>1.6</maven.compiler.source>
+		<maven.compiler.target>1.6</maven.compiler.target>
+		<maven.compiler.executable>javac</maven.compiler.executable>	
+
 		<swig.file>${basedir}/src/main/swig/xcb.i</swig.file>
 		<swig.package>xcb</swig.package>
 		<swig.outdir>${project.build.directory}/generated-sources/swig/${swig.package}</swig.outdir>
