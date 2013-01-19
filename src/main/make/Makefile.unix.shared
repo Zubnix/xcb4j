@@ -4,17 +4,13 @@ TARGETDIR = ../resources
 $(shell mkdir -p $(TARGETDIR))
 
 #if java home is not set (debian) find java home by searching for javac.
-ifndef JAVA_HOME
-	JAVA_HOME := $(shell readlink -f /usr/bin/javac | sed "s:/bin/javac::")
-endif
-	
+JNI_HOME ?= $(shell readlink -f /usr/bin/javac | sed "s:/bin/javac::")
 
 #The LIBNAME_ARCH and MARCH variable should be set by the makefile that includes this makefile.
-
 LIBNAME = libxcb4j_$(LIBNAME_ARCH).so
 
 vpath %.c $(LIBSRCDIR)
-JAVA_INCLUDE_DIR = $(JAVA_HOME)/include
+JAVA_INCLUDE_DIR = $(JNI_HOME)/include
 JNI = $(JAVA_INCLUDE_DIR)
 JNI_LINUX = $(JAVA_INCLUDE_DIR)/linux
 JNI_SOURCE_DIR = ../../../target/generated-sources/swig/xcb
