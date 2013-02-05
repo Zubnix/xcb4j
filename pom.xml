@@ -17,7 +17,7 @@
 		<maven.compiler.executable>javac</maven.compiler.executable>
 
 		<swig.file>${basedir}/src/main/swig/xcb.i</swig.file>
-		<swig.package>xcb</swig.package>
+		<swig.package>org/freedesktop/xcb</swig.package>
 		<swig.outdir>${project.build.directory}/generated-sources/swig/${swig.package}</swig.outdir>
 	</properties>
 
@@ -66,7 +66,7 @@
 									failonerror="true">
 									<arg value="-java" />
 									<arg value="-package" />
-									<arg value="xcb" />
+									<arg value="org.freedesktop.xcb" />
 									<arg value="-o" />
 									<arg value="${swig.outdir}/xcbJNI.c" />
 									<arg value="${swig.file}" />
