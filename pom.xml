@@ -6,7 +6,7 @@
 
 	<artifactId>XCB4J</artifactId>
 	<groupId>org.trinity</groupId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 
 	<name>X C Bindings for Java</name>
 
