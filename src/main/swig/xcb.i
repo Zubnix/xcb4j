@@ -45,8 +45,6 @@ extern xcb_extension_t xcb_shape_id;
 extern xcb_extension_t xcb_sync_id;
 %mutable;
 
-//TODO map xcb_send_client_message char* to xcb_generic_event_t instead of String.
-
 %include "/usr/include/xcb/xcb.h";
 %include "/usr/include/xcb/xproto.h";
 %import "/usr/include/xcb/xcbext.h";
