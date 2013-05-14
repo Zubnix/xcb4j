@@ -3,10 +3,11 @@
 %define CLIENT_MESSAGE_TYPEMAP(TYPE)
 
 %typemap(jni) char* EVENT "jlong"
-%typemap(jtype) char* EVENT "TYPE"
+%typemap(jtype) char* EVENT "long"
 %typemap(jstype) char* EVENT "TYPE"
 
-%typemap(javain) char* EVENT "$javainput"
+%typemap(javain) char* EVENT "$javainput.getCPtr($javainput)"
+
 %typemap(javaout) char* EVENT {	
     return $jnicall;
 }

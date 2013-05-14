@@ -7,6 +7,7 @@ typedef signed int uint32_t;
 typedef signed long long int64_t;
 typedef long long uint64_t;
 
+
 %javaconst(1);
 %javaconst(0) XCB_NONE;
 %javaconst(0) XCB_COPY_FROM_PARENT;

@@ -2,7 +2,12 @@
 
 //from swig lib
 %include "typemaps.i";
-%include "arrays_java.i";
+//%include "arrays_java.i";
+%include "carrays.i"
+%array_class(int, IntArray);
+%array_class(unsigned short, UShortArray);
+%array_class(unsigned char, UCharArray);
+
 %include "various.i";
 %include "enumtypeunsafe.swg";
 SWIG_JAVABODY_PROXY(public, public, SWIGTYPE);
