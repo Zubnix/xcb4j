@@ -4,7 +4,8 @@ TARGETDIR = ../resources
 $(shell mkdir -p $(TARGETDIR))
 
 #if java home is not set (debian) find java home by searching for javac.
-JNI_HOME ?= $(shell readlink -f /usr/bin/javac | sed "s:/bin/javac::")
+JAVA_HOME ?= $(shell readlink -f /usr/bin/javac | sed "s:/bin/javac::")
+JNI_HOME ?= $(JAVA_HOME)
 
 #The LIBNAME_ARCH and MARCH variable should be set by the makefile that includes this makefile.
 LIBNAME = libxcb4j_$(LIBNAME_ARCH).so
